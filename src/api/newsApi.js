@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Use environment variable API_KEY
-const API_KEY = '6aa3c6ccf33e7cf6ec9ea51557efb49a';
+const API_KEY = '6923cd1a1102a1e9186c80b35f1bda8e';
 // Using the proxy set up in vite.config.js
 const BASE_URL = '/api/news';
 
