@@ -1,0 +1,53 @@
+/* Weather component styles */
+
+/* Animation for the loading spinner */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.weather-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.weather-card:hover {
+  transform: translateY(-5px);
+}
+
+.weather-card.dark {
+  color-scheme: dark;
+}
+
+.weather-card.light {
+  color-scheme: light;
+}
+
+/* Make the search container and forecast link stop propagation */
+.search-container, 
+.forecast-link {
+  pointer-events: auto;
+}
+
+/* Animation for loading spinner */
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Ensure the search input doesn't trigger the card click */
+.search-container input,
+.search-container button {
+  pointer-events: auto;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .weather-card {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .weather-card {
+    min-width: auto;
+  }
+} 
