@@ -1,11 +1,8 @@
 import axios from 'axios';
 
-// Use environment variable API_KEY
 const API_KEY = '1d90ef3fff1ffbae553730cea09ad1e8';
-// Using the proxy set up in vite.config.js
-const BASE_URL = '/api/news';
+const BASE_URL = 'http://api.mediastack.com/v1/news'; // Must be absolute URL
 
-// Mock data as fallback for when the API rate limit is exceeded
 const mockNewsData = {
   data: [
     {
@@ -62,10 +59,10 @@ export const fetchNews = async (params = { countries: 'us' }) => {
     };
 
     console.log('Fetching news with params:', requestParams);
-    
+
     try {
       const response = await axios.get(BASE_URL, { params: requestParams });
-      
+
       if (response.data && response.data.data) {
         console.log('API response successful:', response.data);
         return response.data;
@@ -76,14 +73,12 @@ export const fetchNews = async (params = { countries: 'us' }) => {
       }
     } catch (error) {
       console.error('Error fetching news:', error);
-      
-      // Check if rate limit error (status code 429)
+
       if (error.response && error.response.status === 429) {
         console.log('API rate limit exceeded, using mock data');
         return mockNewsData;
       }
-      
-      // For other errors, also fall back to mock data
+
       console.log('Other API error, using mock data');
       return mockNewsData;
     }
