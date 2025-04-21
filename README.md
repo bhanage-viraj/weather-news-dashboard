@@ -1,76 +1,126 @@
-# Weather & News Dashboard
 
-A modern React application that displays India-specific news with filtering by topics, a weather card with AQI information, and a section dedicated to "Today in History".
+**#** 🌦️ Weather News Dashboard
 
-## Features
+A modern, responsive web app that delivers ****** **real-time weather updates** ****** and ****** **live news** ****** in a clean and user-friendly interface.
 
-- **News Section**
-  - India-specific news articles
-  - Filter news by categories/topics
-  - Search functionality
-  - Pagination for browsing more articles
+---
 
-- **Weather Widget**
-  - Current weather information for major Indian cities
-  - Air Quality Index (AQI) display
-  - Visual indicators for AQI levels
+**##** 🔍 Features
 
-- **Today in History**
-  - Shows historical events that happened on today's date
-  - Links to more detailed information
+**###** Weather
 
-## Technologies Used
+**- **Real-time weather for any city
 
-- React + TypeScript
-- Vite for build tooling
-- Tailwind CSS for styling
-- axios for API requests
-- React Router for navigation
+**- **3-day forecast with wind, humidity, UV index, etc.
 
-## APIs Used
+**- **Air Quality Index with visual indicators
 
-- MediaStack API for news data
-- OpenWeatherMap API for weather and AQI data
-- Wikipedia API for historical events
+**- **Remembers last searched location
 
-## Getting Started
+**###** News
 
-### Prerequisites
+**- **Browse by categories (Tech, Business, Sports, etc.)
 
-- Node.js (v14 or higher)
-- npm or yarn
+**- **Keyword-based news search
 
-### Installation
+**- **Save articles for later reading
 
-1. Clone the repository
-```
-git clone <repository-url>
-```
+**- **Responsive, fallback images for articles
 
-2. Navigate to the project directory
-```
+**###** UI/UX
+
+**- **Dark/Light mode with persistence
+
+**- **Fully responsive layout
+
+**- **Framer Motion animations
+
+**- **Accessibility support
+
+---
+
+**##** ⚙️ Tech Stack
+
+**- **** **Frontend** ******: React, Framer Motion
+
+**- **** **State** ******: React Hooks, Context API
+
+**- **** **Styling** ******: CSS-in-JS (inline)
+
+**- **** **Routing** ******: React Router
+
+**- **** **API** ******: Axios, WeatherAPI, MediaStack
+
+**- **** **Build** ******: Vite
+
+**- **** **Deploy** ******: Vercel (with serverless functions)
+
+---
+
+**##** 🚀 Getting Started
+
+```bash
+
+
+git clone https://github.com/yourusername/weather-news-dashboard.git
+
+
 cd weather-news-dashboard
-```
 
-3. Install dependencies
-```
+
 npm install
+
+
 ```
 
-4. Start the development server
+Create a **`**.env**`** file:
+
 ```
+
+
+VITE_WEATHERAPI_KEY=your_weather_api_key
+
+
+MEDIASTACK_API_KEY=your_mediastack_api_key
+
+
+```
+
+Start the dev server:
+
+```bash
+
+
 npm run dev
+
+
 ```
 
-5. Open your browser and navigate to `http://localhost:5173`
+**Go to: **[http://localhost:5173**](**http://localhost:5173**)**
 
-## Environment Variables
+---
 
-To run this project, you may need to set up the following environment variables:
+**##** 🌐 APIs Used
 
-- `VITE_MEDIASTACK_API_KEY` - Your MediaStack API key
-- `VITE_OPENWEATHER_API_KEY` - Your OpenWeatherMap API key
+**- **** **[WeatherAPI](** **https://www.weatherapi.com/)****** – Weather data & AQI**
 
-## License
+**- **** **[MediaStack](** **https://mediastack.com/)****** – Live news articles**
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+---
+
+**##** 🧠 Smart Features
+
+**- **** **API Key Rotation** ******: Cycles through keys, handles limits
+
+**- **** **Theme Persistence** ******: Remembers dark/light preference
+
+**- **** **Responsive Grid** ******: 1–3+ column layout based on screen size
+
+---
+
+**##** 📸 Demo
+
+> Deployed on Vercel ** **
+
+> ***** *(Add your live link here)* *****
+>
